@@ -1,5 +1,5 @@
-import React from "react";
 import { Facebook, Instagram, Twitter, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
@@ -17,22 +17,39 @@ const Footer = () => {
             {/* Quick Links */}
             <div>
                <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-               <ul className="space-y-2">
-                  <li className="hover:text-white cursor-pointer">Home</li>
-                  <li className="hover:text-white cursor-pointer">Products</li>
-                  <li className="hover:text-white cursor-pointer">Categories</li>
-                  <li className="hover:text-white cursor-pointer">About Us</li>
+               <ul className="flex flex-col gap-2 ">
+                  <Link to={'/'}>
+                     <li className="hover:text-white cursor-pointer">Home</li>
+
+                  </Link>
+                  <Link to={'/products'}>
+                     <li className="hover:text-white cursor-pointer">Products</li>
+
+                  </Link>
+                  {/* <li className="hover:text-white cursor-pointer">Categories</li> */}
+                  <Link to={'/about-us'}>
+                     <li className="hover:text-white cursor-pointer">About Us</li>
+                  </Link>
+
                </ul>
             </div>
 
             {/* Customer Service */}
             <div>
                <h3 className="text-lg font-semibold text-white mb-4">Customer Service</h3>
-               <ul className="space-y-2">
-                  <li className="hover:text-white cursor-pointer">Contact Us</li>
-                  <li className="hover:text-white cursor-pointer">FAQ</li>
-                  <li className="hover:text-white cursor-pointer">Returns</li>
-                  <li className="hover:text-white cursor-pointer">Privacy Policy</li>
+               <ul className="flex flex-col gap-2">
+                  {/* <li className="hover:text-white cursor-pointer">Contact Us</li> */}
+                  <Link to={'/faq'}>
+                     <li className="hover:text-white cursor-pointer">FAQ</li>
+                  </Link>
+                  <Link to={'/returns'}>
+                     <li className="hover:text-white cursor-pointer">Returns</li>
+
+                  </Link>
+                  <Link to={'/privacy-policy'}>
+                     <li className="hover:text-white cursor-pointer">Privacy Policy</li>
+
+                  </Link>
                </ul>
             </div>
 

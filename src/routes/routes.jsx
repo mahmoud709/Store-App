@@ -16,6 +16,9 @@ import OrderSuccess from './../components/Orders/OrderSuccess';
 import OrderFailed from './../components/Orders/OrderFailed';
 import RelatedProducts from './../components/Categories/RealatedProducts';
 import About from './../pages/About';
+import FAQ from '../pages/FAQ';
+import Returns from '../pages/Returns';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 
 export const routes = createBrowserRouter([
    {
@@ -29,6 +32,18 @@ export const routes = createBrowserRouter([
          {
             path: '/about-us',
             element: <About />,
+         },
+         {
+            path: '/faq',
+            element: <FAQ />,
+         },
+         {
+            path: '/returns',
+            element: <Returns />,
+         },
+         {
+            path: '/privacy-policy',
+            element: <PrivacyPolicy />,
          },
          {
             path: '/cart',

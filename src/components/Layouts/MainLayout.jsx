@@ -3,6 +3,7 @@ import Navbar from "../common/Header/Navbar"
 import Footer from "../common/Footer/Footer"
 import AuthContextProvider from "../../Context/AuthContext"
 import CartContextProvider from "../../Context/CartContext"
+import ScrollToTop from "../common/SmoothScroll/ScrollToTop"
 
 const MainLayout = () => {
   return (
@@ -12,7 +13,7 @@ const MainLayout = () => {
           <Navbar />
           <div className="mt-25">
             <Outlet />
-
+            <ScrollToTop />
           </div>
           <Footer />
         </CartContextProvider>

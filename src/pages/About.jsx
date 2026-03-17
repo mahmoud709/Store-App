@@ -129,7 +129,7 @@ const About = () => {
             </div>
             <Link
                to="/"
-               className="bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium px-6 py-3 rounded-xl hover:bg-gray-700 transition-colors whitespace-nowrap"
+               className="bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium px-6 py-3 rounded-xl transition-colors whitespace-nowrap"
             >
                Shop now →
             </Link>
