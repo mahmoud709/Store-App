@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900&display=swap');
+@import 'tailwindcss';
+
+html,body{
+   width: 100%;
+   overflow-x: hidden;
+}
+body{
+   background-color: #F7F9FB;
+   font-family: "Outfit", sans-serif;
+}
+/* globals.css */
+.slick-slide {
+   @apply px-3;
+}
+
+.slick-list {
+   @apply -mx-3;
+}
+/* nav+div {
+   padding-top: 90px;
+} */
+
