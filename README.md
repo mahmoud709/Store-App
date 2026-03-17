@@ -1,16 +1,82 @@
-# React + Vite
+# Store 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce web application with a clean UI, secure authentication, 
+cart management, and integrated online payments via Stripe.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Frontend**
+- React + Vite
+- TanStack Query (data fetching & caching)
+- React Router DOM
+- Tailwind CSS
+- Axios
+- Formik + Yup (form validation)
+- React Slick (category slider)
+- Lucide React (icons)
 
-## React Compiler
+**Backend**
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- Stripe (checkout sessions + webhooks)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Browse products by category
+- Product search and filtering
+- User authentication (register / login / logout)
+- Shopping cart with real-time item count
+- Cash on delivery orders
+- Online payment via Stripe hosted checkout
+- Automatic order creation via Stripe webhook
+- Order history in user profile
+- Fully responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+- Node.js
+- MongoDB
+- Stripe account + Stripe CLI (for local webhook testing)
+
+### Installation
+
+# Clone the repo
+git clone https://github.com/your-username/store.git
+
+# Install backend dependencies
+cd backend && npm install
+
+# Install frontend dependencies
+cd frontend && npm install
+
+### Environment Variables
+
+**Backend `.env`**
+DATABASE_URL=your_mongodb_url
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=sk_test_xxx
+STRIPE_WEBHOOK_SECRET=whsec_xxx
+CLIENT_URL=http://localhost:5555
+
+**Frontend `.env`**
+VITE_API_URL=http://localhost:5000/api/v1
+
+### Running Locally
+
+# Terminal 1 — backend
+cd backend && npm run dev
+
+# Terminal 2 — frontend
+cd frontend && npm run dev
+
+# Terminal 3 — Stripe webhook forwarding
+stripe listen --forward-to localhost:5000/webhook-checkout
+```
+
+---
+
+### GitHub repo topics to add
+```
+react nodejs mongodb express stripe tailwindcss ecommerce fullstack tanstack-query
